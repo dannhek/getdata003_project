@@ -1,10 +1,13 @@
-##Description of Purpose##
-
+Description of Purpose
+----------------------
 This repo contains several datasets and an R script for processing. 
 It was written for a project in a Coursera course through the Johns Hopkins School of Public Health, Getting and Cleaning Data; part of the Data Science specialization.
-*Course Information: https://class.coursera.org/getdata-003
-*Assignment information: https://class.coursera.org/getdata-003/human_grading/view/courses/972136/assessments/3/submissions
+	* [Course Information](https://class.coursera.org/getdata-003)
+	* [Assignment information](https://class.coursera.org/getdata-003/human_grading/view/courses/972136/assessments/3/submissions)
+	* [Original Datasource](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 
-##Description of Data##
+Description of Data
+-------------------
 
-##Description of Script##
+Description of Script
+---------------------
