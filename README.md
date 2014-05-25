@@ -109,3 +109,5 @@ Description of Script
 This script assumes the filestructure contained in the zip file from the above Original Datasource. For both Test and Train folders, it will read X, subject and Y files into a dataframe using read.table() cbind() functions. It will only store the above features (columns) from X; this is currently hard-coded. 
 
 After reading the test and train data into separater data frames, it will combine both data frames into a new frame and write that to a new file within the UCI HAR Dataset directory.
+
+Lastly, it will take that new, combined dataset and summarize each variable average across activities by subject. 
