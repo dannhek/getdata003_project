@@ -2,7 +2,7 @@
 ## Author:       Dann Hekman
 ## Email:        dannhek@gmail.com
 ## Start Date:   5/24/14
-## Initial Commit Date: 5/24/14
+## Initial Commit Date: 5/25/14
 ## Last Revision:       n/a
 ## Purpose:      Assignment for Coursera
 ##				 Johns Hopkins University GetData-003
