@@ -101,13 +101,19 @@ The original data contain 561 measurement summaries. This script extracts only t
 542 fBodyBodyGyroJerkMag-mean()  
 543 fBodyBodyGyroJerkMag-std()  
 
-See features_info.txt under the original data source for  full descriptions of each variable.
+See the codebook markdown  and features_info.txt under the original data source for  full descriptions of each variable.
  
  
 Description of Script
 ---------------------
-This script assumes the filestructure contained in the zip file from the above Original Datasource. For both Test and Train folders, it will read X, subject and Y files into a dataframe using read.table() cbind() functions. It will only store the above features (columns) from X; this is currently hard-coded. 
+This script assumes the filestructure contained in the zip file from the above Original Datasource. That is, a directory (originally named UCI HAR Dataset) with the features.txt and activity_labels.txt files which describe the data variables. Additionally, there are test and train folders, which contain the raw data itself. 70% of subjects were randomly assigned to the train subset and the rest were in the test folder. Both test and train contain the data in three different files:   
 
-After reading the test and train data into separater data frames, it will combine both data frames into a new frame and write that to a new file within the UCI HAR Dataset directory.
+* X_train.txt (or X_test)
+* y_train.txt (contains the activity type for each line of X)
+* subject_train.txt (contains subject identifier for each line of X)
 
-Lastly, it will take that new, combined dataset and summarize each variable average across activities by subject. 
+For both Test and Train folders, this script will read X, subject and Y files into a single dataframe using read.table() and cbind() functions. It will only store the above features (columns) from X; this is hard-coded. 
+
+After reading the test and train data into separate data frames, it will combine both data frames into a new frame using rbind() and write that to a new file, X_combined.txt, within the UCI HAR Dataset directory using write.table() with a tab separator 
+
+Lastly, it will take that new, combined dataset and summarize each variable average across activities by subject using the aggregate() function in R. This summary will also be written to the UCI HAR Dataset directory as a tab-delimited txt file called summary_file.txt.
